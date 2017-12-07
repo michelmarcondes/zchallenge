@@ -10,6 +10,9 @@ import SignIn from './components/signIn';
 class App extends Component {
   state = { showLogin: false }
 
+  componentWillMount() {
+    console.log(this.props.auth);
+  }
   
 
   render() {
@@ -20,12 +23,24 @@ class App extends Component {
     );
   }
 
+  goTo = (route) => {
+    this.props.history.replace(`/${route}`)
+  }
+
+  login = () => {
+    this.props.auth.login();
+  }
+
+  logout = () =>  {
+    this.props.auth.logout();
+  }
+
   renderContent = () => {
-    if (!this.state.showLogin) {
+    if (!this.props.auth) {
       return <div>
                   <header className="app-header">
                     <img src={logo} className="app-logo" alt="logo" />
-                    <span className='menu-item' onClick={this.signIn}>Sign In / Sign Up</span>
+                    <span className='menu-item' onClick={this.login}>Sign In / Sign Up</span>
                   </header>
 
                   <div className="app-tabs-area">
