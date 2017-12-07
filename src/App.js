@@ -1,21 +1,53 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import axios from 'axios';
+
+import logo from './assets/logo-small-2x.png';
 import './App.css';
+import * as constants from '../src/constants';
+import Shots from './components/shots';
+import SignIn from './components/signIn';
 
 class App extends Component {
+  state = { showLogin: false }
+
+  
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="app">
+        { this.renderContent() }
       </div>
     );
   }
+
+  renderContent = () => {
+    if (!this.state.showLogin) {
+      return <div>
+                  <header className="app-header">
+                    <img src={logo} className="app-logo" alt="logo" />
+                    <span className='menu-item' onClick={this.signIn}>Sign In / Sign Up</span>
+                  </header>
+
+                  <div className="app-tabs-area">
+                    <h1 className="app-title">Shots</h1>
+                  </div>
+
+                  <div className="content">
+                    <Shots />
+                  </div>
+              </div>
+      ;
+  } else {
+    console.log('call login component');
+    return <SignIn />
+  }
+}
+
+signIn = () => {
+  // let authUrl = '';
+  // window.location = `${constants.AUTH_URL}?client_id=${constants.ACCESS_TOKEN}&redirect_uri=${constants.APP_URL}&scope=public+write&state=${constants.APP_STATE}`;
+  this.setState({ showLogin: !this.state.showLogin });
+}
 }
 
 export default App;
