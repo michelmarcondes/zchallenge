@@ -23,6 +23,10 @@ a:visited {
   color: #3a8bbb;
 }
 
+.show-on-mobile {
+  display: none !important;
+}
+
 a:hover {
   text-decoration: none;
   color: #1e6189;
@@ -220,6 +224,10 @@ a:hover {
   border-radius: 50%
 }
 
+.custom-overlay {
+  -webkit-overflow-scrolling: touch;
+}
+
 .custom-modal {
   border-radius: 6px;
   background: #f4f4f4 !important;
@@ -256,6 +264,13 @@ div.modal-header a {
   font-weight: 600;
   text-decoration: none;
   padding: 0px 4px;
+}
+
+.modal-header-image-wrapper {
+  display: flex;
+  flex-basis: auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-avatar-image {
@@ -390,4 +405,113 @@ div.modal-tags > span {
 .index_fa0 {
   position: relative !important;
   height: auto !important;
+}
+
+@media all and (max-width: 480px) {
+  .show-on-mobile {
+    display: flex !important;
+  }
+  
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+  .custom-overlay {
+    padding: 0px !important;
+  }
+
+  .custom-modal {
+    width: 100%;
+    padding: 0px !important;
+    border-radius: 0px;
+  }
+
+  .modal-content-container {
+    margin: 0px;
+  }
+
+  .modal-header {
+    padding: 10px 50px 0px 10px;
+    margin-bottom: 15px;
+  }
+
+  div.modal-header h1 {
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  .modal-content {
+    flex-direction: column;
+  }
+
+  .modal-avatar-team {
+    top: 19px;
+    left: -13px
+  }
+
+  .modal-content-left-column {
+    margin: 0px;
+  }
+
+  .modal-content-right-column {
+    padding: 15px;
+  }
+
+  .modal-content-text {
+    display: none;
+  }
+
+  .modal-content-image-placeholder {
+    margin-bottom: 0px;
+  }
+
+  .modal-content-image-wrapper {
+    width: 100%;
+    height: auto;
+    padding: 0px;
+  }
+
+  .modal-content-image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: fit-content;
+  }
+
+  .modal-more-from-artist-title {
+    padding-bottom: 10px;
+  }
+
+  .modal-more-from-artist-shots-placeholder {
+    justify-content: space-around;
+    /* min-height: 310px; */
+  }
+
+  div.modal-more-from-artist-thumbs > a > div > img {
+    height: 101px;
+  }
+
+  .modal-tags-placeholder {
+    padding-bottom: 10px;
+  }
+
+  .modal-stats-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid #dddddd;
+  }
+
+  .modal-stats-container {
+    justify-content: flex-start;
+    padding-right: 16px !important;
+    border-bottom: none;
+  }
+
+  .modal-stats-text {
+    display: none !important;
+  }
+
+  .modal-stats-label {
+    display: none !important;
+  }
 }
