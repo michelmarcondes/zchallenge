@@ -60,6 +60,24 @@ a:hover {
   cursor: pointer;
 }
 
+.menu-item-icons-wrapper {
+  position: absolute;
+  right: 0px;
+  cursor: pointer;
+}
+
+.icon {
+  width: 42px;
+  height: 42px;
+  opacity: 0.6;
+}
+
+.iconSelected {
+  width: 42px;
+  height: 42px;
+  opacity: 0.9;
+}
+
 .app-tabs-area {
   height: 56px;
   display: flex;
@@ -406,6 +424,17 @@ div.modal-tags > span {
   position: relative !important;
   height: auto !important;
 }
+
+/* SMALL STYLES */
+.shot-sm {
+  display: none;
+}
+
+.shot-content-sm {
+  height: auto;
+  padding-bottom: 10px;
+}
+/* EOF SMALL STYLES */
 
 @media all and (max-width: 480px) {
   .show-on-mobile {

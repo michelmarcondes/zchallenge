@@ -78,6 +78,7 @@ export default class Shots extends Component {
                         shotData={item}
                         likeShot={this.likeShot}
                         onClick={this.openModal}
+                        shotSize={this.props.shotSize}
                     />
                 );
             });

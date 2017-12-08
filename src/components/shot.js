@@ -7,10 +7,13 @@ export default class Shot extends Component {
 
     render() {
         const data = this.props.shotData;
+        const contentClass = this.props.shotSize === 'small' ? 'shot-content shot-content-sm' : 'shot-content';
+        const avatarClass = this.props.shotSize === 'small' ? 'shot-avatar-data shot-sm' : 'shot-avatar-data';
+        const actionsClass = this.props.shotSize === 'small' ? 'shot-actions-bottom-bar shot-sm' : 'shot-actions-bottom-bar';
 
         return (
             <div className='shot-container'>
-                <div className='shot-content' onClick={() => this.props.onClick(data)}>
+                <div className={contentClass} onClick={() => this.props.onClick(data)}>
                     <div className='shot-image-container'>
                         <div className='shot-description-layer'>
                             <div className='shot-description'>
@@ -31,7 +34,7 @@ export default class Shot extends Component {
 
                     </div>
 
-                    <div className='shot-actions-bottom-bar'>
+                    <div className={actionsClass}>
                         <img
                             src='/assets/icon-shotstat-like.png'
                             className='shot-fav-icon' alt='fav icon'
@@ -40,7 +43,7 @@ export default class Shot extends Component {
                         <span className='shot-fav-counter'>{data.likes_count}</span>
                     </div>
                 </div>
-                <div className='shot-avatar-data'>
+                <div className={avatarClass}>
                     <img
                         src={data.user.avatar_url}
                         className='shot-avatar-icon'
