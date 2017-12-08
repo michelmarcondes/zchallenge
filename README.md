@@ -16,7 +16,7 @@ Caso não tenha o Yarn instalado, siga as instruções em [Yarn Installation](ht
 > Este projeto foi desenvolvido sob a versão 1.1.0 do Yarn.
 
 
-## Etapas da Instalação
+## Instalação
 Faça um clone deste repositório, acesse o diretório onde o repositório foi criado e execute o comando abaixo para instalar todas as suas dependências e executar o aplicativo.
 
 ```
