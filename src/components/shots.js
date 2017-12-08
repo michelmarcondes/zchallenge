@@ -24,7 +24,12 @@ export default class Shots extends Component {
                         pageStart={0}
                         loadMore={this.getShots}
                         hasMore={true}
-                        loader={<div className="infinite-scroll-loader">Loading ...</div>}
+                        loader={
+                            <div className="infinite-scroll-loader">
+                                <img src='/assets/processing-2x.gif' alt='loading...'/>
+                                Loading ...
+                            </div>
+                        }
                         className='infinite-scroll'
                     >
                         {this.renderShots()}

@@ -93,13 +93,20 @@ a:hover {
 }
 
 .infinite-scroll-loader {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  max-width: 69%;
   margin-top: 10px;
-  padding: 20px;
+  padding: 10px 20px;
   background-color: #dddddd;
   font-weight: bold;
   border-radius: 3px;
+}
+
+.infinite-scroll-loader > img {
+  width: 32px;
 }
 
 /* .shots-container::after {
