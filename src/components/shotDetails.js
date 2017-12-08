@@ -23,7 +23,7 @@ export default class ShotDetails extends Component {
                 <div className='modal-content-container'>
                     {/* HEADER */}
                     <div className='modal-header'>
-                        <div>
+                        <div className='modal-header-image-wrapper'>
                             <img
                                 src={data.user.avatar_url}
                                 className='modal-avatar-image'
@@ -82,18 +82,28 @@ export default class ShotDetails extends Component {
                             </div>
                         </div>
                         <div className='modal-content-right-column'>
-                            <div>
+                            <div className='modal-stats-wrapper'>
                                 <StatsItem
                                     iconUrl='/assets/icon-shotstat-like.png'
                                     text='Like?'
                                     count={data.likes_count}
                                     label='likes'
                                 />
+                                {/* JUST ON MOBILE */}
+                                    <StatsItem
+                                        iconUrl='/assets/icon-shotstat-view.png'
+                                        text='Share'
+                                        count={data.views_count}
+                                        label='views'
+                                        styles='show-on-mobile'
+                                    />
+
                                 <StatsItem
                                     iconUrl='/assets/icon-shotstat-share.png'
                                     text='Share'
                                     count={data.views_count}
                                     label='views'
+                                    styles='hide-on-mobile'
                                 />
                                 <StatsItem
                                     iconUrl='/assets/icon-shotstat-bucket.png'
@@ -101,6 +111,15 @@ export default class ShotDetails extends Component {
                                     count={data.buckets_count}
                                     label='buckets'
                                 />
+
+                                {/* JUST ON MOBILE */}
+                                    <StatsItem
+                                        iconUrl='/assets/icon-shotstat-share.png'
+                                        text=''
+                                        count=''
+                                        label=''
+                                        styles='show-on-mobile'
+                                    />
                             </div>
 
                             <div>

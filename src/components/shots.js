@@ -39,7 +39,8 @@ export default class Shots extends Component {
                     open={this.state.modalIsOpen}
                     onClose={this.closeModal}
                     classNames={{
-                        modal: 'custom-modal'
+                        modal: 'custom-modal',
+                        overlay: 'custom-overlay'
                     }}
                 >
                     <ShotDetails shotData={this.state.shotData} />
