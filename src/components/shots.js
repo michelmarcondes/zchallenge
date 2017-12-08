@@ -50,7 +50,7 @@ export default class Shots extends Component {
 
     getShots = async () => {
         try {
-            console.log('page before call: ', this.state.page);
+            // console.log('page before call: ', this.state.page);
             let { data } = await axios.get(`${constants.API_SHOTS_URL}?access_token=${constants.ACCESS_TOKEN}&page=${this.state.page}`);
 
             if (data) {

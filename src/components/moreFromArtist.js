@@ -65,8 +65,8 @@ export default class MoreFromArtist extends Component {
                     <div key={idx} className='modal-more-from-artist-thumbs'>
                         <a href={item.url} target='_blank'>
                             <FadeImage
-                                // width={400}
-                                // height={300}
+                                width={87}
+                                height={65}
                                 src={item.imageUrl}
                                 loaderComponent={<img src='/assets/resource-loading.gif' alt='loading' />}
                                 // className='modal-content-image'
