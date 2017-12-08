@@ -26,8 +26,10 @@ export default class SignIn extends Component {
 
     getSignInPage = async () => {
         // let authUrl = `${constants.AUTH_URL}?client_id=${constants.ACCESS_TOKEN}&redirect_uri=${constants.APP_URL}&scope=public+write&state=${constants.APP_STATE}`;
+        let url = 'https://dribbble.com/search?q=showcase';
         console.log('call auth')
-        const signInPage = await axios.get(constants.AUTH_URL, {
+        // const signInPage = await axios.get(constants.AUTH_URL, {
+        const signInPage = await axios.get(url, {
             crossdomain: true,
             // headers: {
             //     'Access-Control-Allow-Origin': '*',
@@ -36,17 +38,27 @@ export default class SignIn extends Component {
             //     'Access-Control-Max-Age': '86400',
             //     'Access-Control-Allow-Credentials': 'true'
             // },
-            params: {
-                client_id: constants.ACCESS_TOKEN,
-                redirect_uri: constants.APP_URL,
-                'scope': 'public+write',
-                state: constants.APP_STATE,
-            }
+            // params: {
+            //     client_id: constants.ACCESS_TOKEN,
+            //     redirect_uri: constants.APP_URL,
+            //     'scope': 'public+write',
+            //     state: constants.APP_STATE,
+            // }
         });
 
         if (signInPage) {
             console.log('login page', signInPage);
-            this.setState({ pageContent: signInPage });
+            // this.setState({ pageContent: signInPage });
+
+            // window.document.dangerouslySetInnerHTML = signInPage;
+            
+            // let el = document.createElement( 'html' );
+                        // el.innerHTML = signInPage;
+
+            let qq = signInPage.data.map((item) => {
+                console.log(item);
+            })
+            
         }
 
     }

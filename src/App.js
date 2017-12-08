@@ -11,7 +11,7 @@ class App extends Component {
   state = { showLogin: false }
 
   componentWillMount() {
-    console.log(this.props.auth);
+    // console.log(this.props.auth);
   }
   
 
@@ -23,25 +23,25 @@ class App extends Component {
     );
   }
 
-  goTo = (route) => {
-    this.props.history.replace(`/${route}`)
-  }
+  // goTo = (route) => {
+  //   this.props.history.replace(`/${route}`)
+  // }
 
-  login = () => {
-    this.props.auth.login();
-  }
+  // login = () => {
+  //   this.props.auth.login();
+  // }
 
-  logout = () =>  {
-    this.props.auth.logout();
-  }
+  // logout = () =>  {
+  //   this.props.auth.logout();
+  // }
 
   renderContent = () => {
-    if (!this.props.auth) {
+    if (!this.state.showLogin) {
       return <div>
                   <header className="app-header">
                     <img src={logo} className="app-logo" alt="logo" />
 
-                    {/* <span className='menu-item' onClick={this.signIn}>Sign In / Sign Up</span> */}
+                    <span className='menu-item' onClick={() => this.signIn()}>Sign In / Sign Up</span>
 
                   </header>
 
@@ -61,6 +61,7 @@ class App extends Component {
 }
 
 signIn = () => {
+  console.log('singIn')
   // let authUrl = '';
   // window.location = `${constants.AUTH_URL}?client_id=${constants.ACCESS_TOKEN}&redirect_uri=${constants.APP_URL}&scope=public+write&state=${constants.APP_STATE}`;
   this.setState({ showLogin: !this.state.showLogin });
