@@ -90,20 +90,20 @@ export default class ShotDetails extends Component {
                                     label='likes'
                                 />
                                 {/* JUST ON MOBILE */}
-                                <StatsItem
-                                    iconUrl='/assets/icon-shotstat-view.png'
-                                    text='Share'
-                                    count={data.views_count}
-                                    label='views'
-                                    style='show-on-mobile'
-                                />
+                                    <StatsItem
+                                        iconUrl='/assets/icon-shotstat-view.png'
+                                        text='Share'
+                                        count={data.views_count}
+                                        label='views'
+                                        styles='show-on-mobile'
+                                    />
 
                                 <StatsItem
                                     iconUrl='/assets/icon-shotstat-share.png'
                                     text='Share'
                                     count={data.views_count}
                                     label='views'
-                                    style='hide-on-mobile'
+                                    styles='hide-on-mobile'
                                 />
                                 <StatsItem
                                     iconUrl='/assets/icon-shotstat-bucket.png'
@@ -113,13 +113,13 @@ export default class ShotDetails extends Component {
                                 />
 
                                 {/* JUST ON MOBILE */}
-                                <StatsItem
-                                    iconUrl='/assets/icon-shotstat-share.png'
-                                    text=''
-                                    count=''
-                                    label=''
-                                    style='show-on-mobile'
-                                />
+                                    <StatsItem
+                                        iconUrl='/assets/icon-shotstat-share.png'
+                                        text=''
+                                        count=''
+                                        label=''
+                                        styles='show-on-mobile'
+                                    />
                             </div>
 
                             <div>

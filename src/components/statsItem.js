@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class StatsItem extends Component {
     render() {
         return (
-            <div className={`modal-stats-container ${this.props.style}`}>
+            <div className={`modal-stats-container ${this.props.styles}`}>
                 <div>
                     <img src={this.props.iconUrl} alt={this.props.label} />
                     <span className='modal-stats-text'>{this.props.text}</span>
