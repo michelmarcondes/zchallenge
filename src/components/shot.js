@@ -10,20 +10,19 @@ export default class Shot extends Component {
 
         return (
             <div className='shot-container'>
-                <div className='shot-content'>
+                <div className='shot-content' onClick={() => this.props.onClick(data)}>
                     <div className='shot-image-container'>
                         <div className='shot-description-layer'>
                             <div className='shot-description'>
                                 <strong className='shot-description-title'>{data.title}</strong>
-                                <div className='shot-description-comment' dangerouslySetInnerHTML={{ __html: data.description }} />
+                                <div
+                                    className='shot-description-comment'
+                                    dangerouslySetInnerHTML={{ __html: data.description }}
+                                />
                             </div>
                         </div>
 
                         <div className='shot-image'>
-                            {/* <img alt="Robot Emoji Animation [WIP]"
-                            src="https://cdn.dribbble.com/users/25514/screenshots/3997009/robot-emoji-animation-ramotion_teaser.gif"
-                            data-originalsrc="https://cdn.dribbble.com/users/25514/screenshots/3997009/robot-emoji-animation-ramotion_teaser.gif"
-                        /> */}
                             <img
                                 src={data.images.teaser}
                                 alt={data.title}
@@ -33,11 +32,11 @@ export default class Shot extends Component {
                     </div>
 
                     <div className='shot-actions-bottom-bar'>
-                            <img 
-                                src='/assets/ic_favorite_black_48px.svg' 
-                                className='shot-fav-icon' alt='fav icon' 
-                                onClick={() => this.props.likeShot(data.id)}
-                            />
+                        <img
+                            src='/assets/icon-shotstat-like.png'
+                            className='shot-fav-icon' alt='fav icon'
+                            onClick={() => this.props.likeShot(data.id)}
+                        />
                         <span className='shot-fav-counter'>{data.likes_count}</span>
                     </div>
                 </div>
@@ -48,10 +47,22 @@ export default class Shot extends Component {
                         alt={data.title}
                     />
                     <span>
-                        {data.user.name}
+                        <a href={data.user.html_url} target='_blank'>
+                            {this.formatUsername(data.user.name)}
+                        </a>
                     </span>
                 </div>
             </div>
         );
+    }
+
+    formatUsername = (username) => {
+        if (username.length > 26) {
+            username = username.toString().substring(0, 23);
+            username = username + '...';
+            return username
+        }
+
+        return username;
     }
 }

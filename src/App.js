@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 import logo from './assets/logo-small-2x.png';
 import './App.css';
-import * as constants from '../src/constants';
+// import * as constants from '../src/constants';
 import Shots from './components/shots';
 import SignIn from './components/signIn';
 
@@ -25,7 +25,7 @@ class App extends Component {
       return <div>
                   <header className="app-header">
                     <img src={logo} className="app-logo" alt="logo" />
-                    <span className='menu-item' onClick={this.signIn}>Sign In / Sign Up</span>
+                    {/* <span className='menu-item' onClick={this.signIn}>Sign In / Sign Up</span> */}
                   </header>
 
                   <div className="app-tabs-area">
