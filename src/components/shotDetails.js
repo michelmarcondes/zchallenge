@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Moment from 'react-moment';
+import FadeImage from 'react-fade-image';
 
 import StatsItem from './statsItem';
 import MoreFromArtist from './moreFromArtist';
@@ -61,7 +62,14 @@ export default class ShotDetails extends Component {
                         <div className='modal-content-left-column'>
                             <div className='modal-content-image-placeholder'>
                                 <div className='modal-content-image-wrapper'>
-                                    <img src={data.images.normal} className='modal-content-image' alt={data.title} />
+                                    <FadeImage
+                                        width={400}
+                                        height={300}
+                                        src={data.images.normal}
+                                        loaderComponent={<div className='modal-content-image'><img src='/assets/resource-loading.gif' alt='loading' /></div>}
+                                        className='modal-content-image' 
+                                        alt={data.title} 
+                                    />
                                 </div>
                             </div>
 
@@ -100,12 +108,6 @@ export default class ShotDetails extends Component {
                             </div>
 
                             <div>
-                                {/* <h3 className='modal-more-from-artist-title'>
-                                    Tags
-                                </h3>
-                                <div className='modal-tags'>
-                                    {this.renderTags(data.tags)}
-                                </div> */}
                                 <Tags tags={data.tags} />
                             </div>
                         </div>

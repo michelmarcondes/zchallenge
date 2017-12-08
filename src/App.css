@@ -61,6 +61,7 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .app-title {
@@ -291,6 +292,9 @@ div.modal-header a {
 }
 
 .modal-content-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 400px;
   height: 300px;
   max-width: 400px;
@@ -351,7 +355,11 @@ div.modal-stats-container > div > img {
   padding-bottom: 10px;
 }
 
-div.modal-more-from-artist-thumbs > a > img {
+div.modal-more-from-artist-thumbs > a > div {
+  height: auto !important;
+}
+
+div.modal-more-from-artist-thumbs > a > div > img {
   width: 100%;
   border-radius: 2px;
   box-shadow: 0 1px 1px rgba(0,0,0,0.07);
@@ -373,4 +381,10 @@ div.modal-tags > span {
   font-size: 14px;
   color: #bbb;
   font-weight: 100;
+}
+
+/* image lazy load */
+.index_fa0 {
+  position: relative !important;
+  height: auto !important;
 }

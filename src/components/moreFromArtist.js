@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import FadeImage from 'react-fade-image';
 
 import * as constants from '../constants';
 
@@ -20,7 +21,7 @@ export default class MoreFromArtist extends Component {
                     More from {this.props.artist.name}
                 </h3>
                 <div className='modal-more-from-artist-shots-placeholder'>
-                    { this.renderUserShots() }
+                    {this.renderUserShots()}
                 </div>
             </div>
         );
@@ -63,7 +64,15 @@ export default class MoreFromArtist extends Component {
                 return (
                     <div key={idx} className='modal-more-from-artist-thumbs'>
                         <a href={item.url} target='_blank'>
-                            <img src={item.imageUrl} alt={item.title} />
+                            <FadeImage
+                                // width={400}
+                                // height={300}
+                                src={item.imageUrl}
+                                loaderComponent={<img src='/assets/resource-loading.gif' alt='loading' />}
+                                // className='modal-content-image'
+                                alt={item.title}
+                            />
+                            {/* <img src={item.imageUrl} alt={item.title} /> */}
                         </a>
                     </div>
                 );
