@@ -30,12 +30,12 @@ Caso seu navegador não seja aberto automaticamente, acesse http://localhost:300
 > Divirta-se!
 
 ### Screenshots
-![Small with Info](https://www.dropbox.com/s/rdgwqbpy0geb9nr/small-with-info.png?dl=0)
+![Small with Info](http://intentus.me/mmp/zchallenge/small-with-info.png)
 
-![Small without Info](https://www.dropbox.com/s/nb0wduweppdfazp/small-without-info.png?dl=0)
+![Small without Info](http://intentus.me/mmp/zchallenge/small-without-info.png)
 
-![Loading on Chrome](https://www.dropbox.com/s/y8t7zfhmlxpalll/loading-on-chrome.png?dl=0)
+![Loading on Chrome](http://intentus.me/mmp/zchallenge/loading-on-chrome.png)
 
-![Detail on Firefox](https://www.dropbox.com/s/vve086jwfwgcwsp/detail-on-firefox.png?dl=0)
+![Detail on Firefox](http://intentus.me/mmp/zchallenge/detail-on-firefox.png)
 
-![Mobile Detail on Firefox](https://www.dropbox.com/s/yk8b9y7ko2fzdh8/detail-mobile-on-firefox.png?dl=0)
+![Mobile Detail on Firefox](http://intentus.me/mmp/zchallenge/detail-mobile-on-firefox.png)
